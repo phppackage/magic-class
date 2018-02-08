@@ -93,6 +93,10 @@ class MagicClass implements ArrayAccess, Countable
      */
     public function __get($index)
     {
+        if (!isset($this->storage->{$index})) {
+            return;
+        }
+        
         return $this->storage->{$index};
     }
 
@@ -152,7 +156,7 @@ class MagicClass implements ArrayAccess, Countable
     }
 
     /**
-     * Magic method (overide print_r/var_dump).
+     * Magic method (override print_r/var_dump).
      */
     public function __debugInfo()
     {

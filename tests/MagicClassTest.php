@@ -127,6 +127,9 @@ class MagicClassTest extends TestCase
         $magicClass[] = 'BarBaz';
         $this->assertInternalType('string', $magicClass->{0});
         $this->assertEquals('BarBaz', $magicClass->{0});
+        
+        // test not set
+        $this->assertEquals(null, $magicClass->non_existent);
     }
 
     /**
