@@ -1,7 +1,7 @@
 ## Magic Class
 
 [![Build Status](https://travis-ci.org/phppackage/magic-class.svg?branch=master)](https://travis-ci.org/phppackage/magic-class)
-[![StyleCI](https://styleci.io/repos/REPO_ID_CHANGE_THIS/shield?branch=master)](https://styleci.io/repos/REPO_ID_CHANGE_THIS)
+[![StyleCI](https://styleci.io/repos/120748267/shield?branch=master)](https://styleci.io/repos/120748267)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/phppackage/magic-class/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/phppackage/magic-class/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/phppackage/magic-class/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/phppackage/magic-class/code-structure/master/code-coverage)
 [![Packagist Version](https://img.shields.io/packagist/v/phppackage/magic-class.svg?style=flat-square)](https://github.com/phppackage/magic-class/releases)
