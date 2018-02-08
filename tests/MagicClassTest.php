@@ -173,7 +173,6 @@ class MagicClassTest extends TestCase
 
         // set something
         $magicClass->object = new class {
-
             private $foo = 'BarBaz';
 
             public function getFoo()
@@ -235,5 +234,4 @@ class MagicClassTest extends TestCase
         $this->assertEquals(1, $magicClass->count());
         $this->assertEquals(1, count($magicClass));
     }
-
 }
