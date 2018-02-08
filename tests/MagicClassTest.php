@@ -171,19 +171,21 @@ class MagicClassTest extends TestCase
         // set something
         $magicClass->string = 'BarBaz';
 
-        // set something
-        $magicClass->object = new class {
-            private $foo = 'BarBaz';
-
-            public function getFoo()
-            {
-                return $this->foo;
-            }
-        };
+        //
+        if (phpversion() >= 7) {
+            $magicClass->object = new class {
+                private $foo = 'BarBaz';
+    
+                public function getFoo()
+                {
+                    return $this->foo;
+                }
+            };
+            $this->assertEquals('BarBaz', $magicClass('object')->getFoo());
+        }
 
         // test
         $this->assertEquals('BarBaz', $magicClass('string'));
-        $this->assertEquals('BarBaz', $magicClass('object')->getFoo());
         $this->assertEquals(null, $magicClass('non_existent'));
     }
 
