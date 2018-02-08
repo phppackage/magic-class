@@ -170,5 +170,4 @@ class MagicClass implements ArrayAccess, Countable
     {
         return $this->storage->count();
     }
-
 }
