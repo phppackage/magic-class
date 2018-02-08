@@ -93,11 +93,7 @@ class MagicClass implements ArrayAccess, Countable
      */
     public function __get($index)
     {
-        if (!isset($this->storage->{$index})) {
-            return;
-        }
-        
-        return $this->storage->{$index};
+        return $this->offsetGet($index);
     }
 
     /**
@@ -108,7 +104,7 @@ class MagicClass implements ArrayAccess, Countable
      */
     public function __set($index, $value)
     {
-        $this->storage->{$index} = $value;
+        return $this->offsetSet($index, $value);
     }
 
     /**
@@ -118,7 +114,7 @@ class MagicClass implements ArrayAccess, Countable
      */
     public function __isset($index)
     {
-        return isset($this->storage->{$index});
+        return $this->offsetExists($index);
     }
 
     /**
@@ -128,7 +124,7 @@ class MagicClass implements ArrayAccess, Countable
      */
     public function __unset($index)
     {
-        unset($this->storage->{$index});
+        return $this->offsetUnset($index);
     }
 
     /**
